@@ -1,0 +1,17 @@
+{
+  "name": "Kshitij Jain — Backend Developer",
+  "short_name": "Kshitij Jain",
+  "description": "Portfolio of Kshitij Jain, a backend developer focused on Java and Spring Boot.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

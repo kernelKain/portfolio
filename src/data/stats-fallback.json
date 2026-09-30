@@ -1,0 +1,37 @@
+{
+  "usernames": {
+    "github": "kernelKain",
+    "leetcode": "kernelKain",
+    "codeforces": "kernelKain"
+  },
+  "providers": {
+    "github": { "status": "unavailable", "data": null },
+    "leetcode": {
+      "status": "fallback",
+      "asOf": "2026-09-30",
+      "data": {
+        "username": "kernelKain",
+        "solved": 759,
+        "easy": 196,
+        "medium": 455,
+        "hard": 108,
+        "contestRating": 1887,
+        "badge": "Knight",
+        "globalRanking": 43493,
+        "totalParticipants": 884439,
+        "contestsAttended": 46,
+        "profileUrl": "https://leetcode.com/u/kernelKain/"
+      }
+    },
+    "codeforces": {
+      "status": "fallback",
+      "asOf": "2026-09-30",
+      "data": {
+        "handle": "kernelKain",
+        "rating": null,
+        "rank": "Unrated",
+        "profileUrl": "https://codeforces.com/profile/kernelKain"
+      }
+    }
+  }
+}

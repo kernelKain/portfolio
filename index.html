@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fafafa" />
+    <!-- Double-brace tokens are filled per route by config/vite-plugins.js (dev and build). -->
+    <title>{{PAGE_TITLE}}</title>
+    <meta name="description" content="{{PAGE_DESCRIPTION}}" />
+    <meta name="author" content="Kshitij Jain" />
+    <link rel="canonical" href="{{PAGE_URL}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kshitij Jain" />
+    <meta property="og:url" content="{{PAGE_URL}}" />
+    <meta property="og:title" content="{{PAGE_TITLE}}" />
+    <meta property="og:description" content="{{PAGE_DESCRIPTION}}" />
+    <meta property="og:image" content="{{IMAGE_URL}}" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="{{IMAGE_ALT}}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{PAGE_TITLE}}" />
+    <meta name="twitter:description" content="{{PAGE_DESCRIPTION}}" />
+    <meta name="twitter:image" content="{{IMAGE_URL}}" />
+    <meta name="twitter:image:alt" content="{{IMAGE_ALT}}" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- If this script changes, update its sha256 hash in the vercel.json Content-Security-Policy (npm test checks this). -->
+    <script>
+      (() => {
+        try {
+          const storedTheme = localStorage.getItem('portfolio-theme');
+          const savedTheme = storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : null;
+          const systemTheme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          const theme = savedTheme || systemTheme;
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+          document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#0a0c10' : '#fafafa';
+        } catch {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kshitij Jain",
+        "jobTitle": "Backend Developer",
+        "url": "{{SITE_URL}}/",
+        "image": "{{IMAGE_URL}}",
+        "email": "mailto:kshitijjain.dev@gmail.com",
+        "telephone": "+91-9672508723",
+        "address": { "@type": "PostalAddress", "addressRegion": "Rajasthan", "addressCountry": "IN" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Malaviya National Institute of Technology Jaipur" },
+        "sameAs": [
+          "https://github.com/kernelKain",
+          "https://leetcode.com/u/kernelKain/",
+          "https://peerlist.io/kernel_kain",
+          "https://www.linkedin.com/in/kshitij-jain99"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
